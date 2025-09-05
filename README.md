@@ -1,2 +1,104 @@
 # cartinha-amor
-teus
+<html>
+ <head>  
+ </head> 
+ <body> 
+  <meta charset="UTF-8"> 
+  <title>para o meu amor, mateus. ❤️</title> 
+  <!-- Fonte manuscrita do Google Fonts --> 
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&amp;display=swap" rel="stylesheet"> 
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Patrick Hand', Arial, sans-serif;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      color: #333;
+      text-align: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .start-screen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    button {
+      background-color: #b30059;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #ff4d94;
+    }
+
+    h1 {
+      font-size: 2.2em;
+      color: #b30059;
+      text-transform: lowercase;
+    }
+
+    p {
+      font-size: 1.2em;
+      max-width: 600px;
+      line-height: 1.6;
+      white-space: pre-line;
+      text-transform: lowercase;
+    }
+
+    .heart {
+      font-size: 80px;
+      animation: pulse 1s infinite;
+      margin: 20px 0;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style> 
+  <!-- Tela inicial --> 
+  <div class="start-screen"> 
+   <button onclick="mostrarCartinha()">abrir cartinha 💌</button> 
+  </div> 
+  <!-- Cartinha escondida --> 
+  <div class="container" id="cartinha"> 
+   <h1>para o meu amor, mateus. ❤️</h1> 
+   <p> oi teteu meu amor!!!!!! eu te amo mais do que é possível expressar, mais que tudo. isso é só para te lembrar de que eu te amo demais, e quero ficar pra sempre com você. prometo fazer de tudo por nós. você é incrível e eu sou infinitamente grata por tudo o que tem feito por nós. desculpa por todas as vezes que te deixei triste. 💖 </p> 
+   <div class="heart">
+     ❤️ 
+   </div> 
+   <p>com carinho, isabelle 💌</p> 
+  </div> 
+  <script>
+    function mostrarCartinha() {
+      document.querySelector(".start-screen").style.display = "none";
+      document.getElementById("cartinha").style.display = "flex";
+    }
+  </script>   
+ </body>
+</html>
